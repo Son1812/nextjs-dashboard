@@ -14,7 +14,7 @@ const StyledMain = styled.main<StyledMainProps>`
     isContentCompact &&
     `
     margin-inline: auto;
-    max-inline-size: ${themeConfig.compactContentWidth}px;
+    max-inline-size: ${themeConfig.compactContentWidth}%;
   `}
 `
 

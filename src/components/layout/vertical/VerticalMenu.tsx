@@ -92,7 +92,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
           </MenuItem>
         </SubMenu> */}
         <MenuSection label='Apps & Pages'>
-          <MenuItem
+          {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_PRO_URL}/apps/email`}
             icon={<i className='ri-mail-open-line' />}
             suffix={<Chip label='Pro' size='small' color='primary' variant='tonal' />}
@@ -123,7 +123,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
             target='_blank'
           >
             Kanban
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
             Account Settings
           </MenuItem>
@@ -178,7 +178,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
           >
             React Table
           </MenuItem> */}
-          <MenuItem
+          {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/form-elements`}
             icon={<i className='ri-radio-button-line' />}
             suffix={<i className='ri-external-link-line text-xl' />}
@@ -193,68 +193,26 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
             target='_blank'
           >
             MUI Tables
-          </MenuItem>
+          </MenuItem> */}
         </MenuSection>
-        <MenuSection label='Misc'>
+        <SubMenu label='Others' icon={<i className='ri-more-line' />}>
+          <MenuItem suffix={<Chip label='New' size='small' color='info' />}>Item With Badge</MenuItem>
           <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/foundation`}
-            icon={<i className='ri-pantone-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
+            href='https://themeselection.com'
             target='_blank'
-          >
-            Foundation
-          </MenuItem>
-          <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/components`}
-            icon={<i className='ri-toggle-line' />}
             suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
           >
-            Components
+            External Link
           </MenuItem>
-          <MenuItem
-            href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/menu-examples/overview`}
-            icon={<i className='ri-menu-search-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Menu Examples
-          </MenuItem>
-          <MenuItem
-            href={`https://github.com/themeselection/${process.env.NEXT_PUBLIC_REPO_NAME}/issues`}
-            icon={<i className='ri-lifebuoy-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Raise Support
-          </MenuItem>
-          <MenuItem
-            href={process.env.NEXT_PUBLIC_DOCS_URL}
-            icon={<i className='ri-book-line' />}
-            suffix={<i className='ri-external-link-line text-xl' />}
-            target='_blank'
-          >
-            Documentation
-          </MenuItem>
-          <SubMenu label='Others' icon={<i className='ri-more-line' />}>
-            <MenuItem suffix={<Chip label='New' size='small' color='info' />}>Item With Badge</MenuItem>
-            <MenuItem
-              href='https://themeselection.com'
-              target='_blank'
-              suffix={<i className='ri-external-link-line text-xl' />}
-            >
-              External Link
-            </MenuItem>
-            <SubMenu label='Menu Levels'>
-              <MenuItem>Menu Level 2</MenuItem>
-              <SubMenu label='Menu Level 2'>
-                <MenuItem>Menu Level 3</MenuItem>
-                <MenuItem>Menu Level 3</MenuItem>
-              </SubMenu>
+          <SubMenu label='Menu Levels'>
+            <MenuItem>Menu Level 2</MenuItem>
+            <SubMenu label='Menu Level 2'>
+              <MenuItem>Menu Level 3</MenuItem>
+              <MenuItem>Menu Level 3</MenuItem>
             </SubMenu>
-            <MenuItem disabled>Disabled Menu</MenuItem>
           </SubMenu>
-        </MenuSection>
+          <MenuItem disabled>Disabled Menu</MenuItem>
+        </SubMenu>
       </Menu>
     </ScrollWrapper>
   )
